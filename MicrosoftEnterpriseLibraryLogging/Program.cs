@@ -16,9 +16,10 @@ namespace MicrosoftEnterpriseLibraryLogging
             LogEntry entry = new LogEntry();
 
             entry.Message = "Application started.";
-            entry.Categories.Add("LogCategory");
+            entry.Categories.Add("General");
 
             writer.Write(entry);
+            writer.FlushContextItems();
         }
     }
 }
